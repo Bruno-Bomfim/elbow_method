@@ -1,4 +1,4 @@
-import k_means
+import create_kmeans_with_elbow_method
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -9,7 +9,7 @@ def main():
 #recebe o arquivo do excel e número de iterações
     arquivo = str(input('Digite o local do arquivo(arquivo excel): '))
     iteracoes = int(input('Digite o número de iterações(inteiro e positivo): '))
-    dados = k_means.KMeans3D(pd.read_excel(arquivo),iteracoes)
+    dados = create_kmeans_with_elbow_method.KMeans3D(pd.read_excel(arquivo),iteracoes)
 #aplica o elbow method na base de dados e plota gráfico de cluster x distorção
     dados.elbow_method()
 #recebe número de clusters

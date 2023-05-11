@@ -5,7 +5,7 @@ import plotly.express as px
 
 class KMeans3D:
     
-    def __init__(self, data, k = 10, max_iterations=1000):
+    def __init__(self, data, max_iterations=1000):
         self.data = data
         self.max_iterations = max_iterations
         self.centroids = None
